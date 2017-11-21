@@ -25,6 +25,8 @@ def answer_to_group(message):
 def take_answer(message):
     message = regex_command.sub('', message)
     message = regex.sub('', message)
+    message = message.lower()
+    print(message)
     if len(message) != 0:
         return nn.take_answer(message)
     else:
